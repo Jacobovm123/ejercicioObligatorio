@@ -18,37 +18,26 @@ import static org.junit.Assert.*;
  */
 public class factorialTest {
     
-    public factorialTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
-
-    /**
-     * Test of factoria method, of class factorial.
-     */
+ 
     @Test
     public void testFactoria() {
+        
+        
         System.out.println("factoria");
-        int num = 0;
-        long expResult = 0L;
-        long result = factorial.factoria(num);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      
+        Object resultadoObtenido;
+        int num=-1;
+        String resultadoEsperado="Esta función solo acepta números positivos o cero!!";
+        
+       factorial fac = new factorial();
+       
+       resultadoObtenido=factorial.factoria(num);
+       assertTrue(resultadoObtenido instanceof String );
+       assertEquals(resultadoEsperado, resultadoObtenido.toString());
+       
+       
+  
+        
     }
     
 }
